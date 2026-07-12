@@ -1,0 +1,142 @@
+/* ==========================================================================
+   THE ARCHIVE — Typography System
+   Visual Milestone 01 · The Arrival
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+
+/* ==========================================================================
+   FONT TOKENS
+   ========================================================================== */
+
+:root {
+  --font-quote: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+
+/* ==========================================================================
+   LOADER — MONOSPACE TERMINAL
+   ========================================================================== */
+
+.archive-loader__line,
+.archive-loader__text {
+  font-family: var(--font-monospace);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-stamp);
+  text-transform: uppercase;
+  color: var(--color-concrete-light);
+}
+
+
+/* ==========================================================================
+   ARRIVAL HERO — EPIGRAPH
+   ========================================================================== */
+
+.arrival-hero__epigraph,
+.arrival-hero__epigraph-line {
+  font-family: var(--font-quote);
+  font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  font-weight: var(--font-weight-regular);
+  font-style: italic;
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--color-paper-warm);
+}
+
+
+/* ==========================================================================
+   ARRIVAL HERO — DISPLAY TITLE
+   ========================================================================== */
+
+.arrival-hero__title,
+.arrival-hero__title-line {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 2.5rem + 6vw, 8rem);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-display);
+  letter-spacing: var(--letter-spacing-wider);
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+.arrival-hero.is-title-visible .arrival-hero__title-line {
+  letter-spacing: var(--letter-spacing-display);
+}
+
+
+/* ==========================================================================
+   QUOTES — NARRATIVE BLOCKQUOTES
+   ========================================================================== */
+
+blockquote,
+blockquote p {
+  font-family: var(--font-quote);
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+
+/* ==========================================================================
+   NARRATIVE BODY
+   ========================================================================== */
+
+body,
+p,
+li,
+dd,
+td,
+.arrival-hero__content {
+  font-family: var(--font-body);
+}
+
+
+/* ==========================================================================
+   ARCHIVE FOLDER — DOCUMENT
+   ========================================================================== */
+
+.archive-folder__field {
+  font-family: var(--font-monospace);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-stamp);
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.archive-folder__field--stamp {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-classification);
+  color: var(--color-emergency-red-dark);
+}
+
+.archive-folder__document-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-block-end: var(--space-6);
+  margin-block-end: var(--space-6);
+  border-block-end: var(--border-width-hairline) solid var(--color-paper-stain);
+}
+
+.archive-folder__document-body p {
+  max-width: none;
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-ink-muted);
+}
+
+.archive-folder__document-body p + p {
+  margin-block-start: var(--space-4);
+}
+
+.archive-folder__archive-number {
+  font-family: var(--font-quote);
+  font-style: italic;
+}

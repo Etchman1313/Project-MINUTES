@@ -5,41 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Classified government records documenting the final years of the Long Emergency. Chapter One of The Uncivil War.">
   <title>The Archive</title>
-  <link rel="stylesheet" href="css/archive.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
-<body>
+
+<body class="is-scroll-locked">
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <!-- ============================================================
        ARCHIVE LOADER
-       Initial access sequence. Visitor arrives before the record
-       opens. Silence and latency are intentional.
+       Authentication sequence. Black screen. Silence. Then access.
        ============================================================ -->
-  <section id="archive-loader" aria-label="Archive access sequence" aria-live="polite">
-    <header>
-      <p class="archive-loader__status">Establishing secure connection</p>
-      <p class="archive-loader__classification">Classification: <abbr title="Restricted Data">RD</abbr> — Long Emergency Continuance Files</p>
-    </header>
-    <dl class="archive-loader__metadata">
-      <div>
-        <dt>Repository</dt>
-        <dd>National Continuance Archive</dd>
+  <section id="archive-loader" class="archive-loader" aria-label="Archive authentication" aria-live="polite">
+    <div class="archive-loader__terminal">
+      <p class="archive-loader__line">
+        <span class="archive-loader__cursor" aria-hidden="true"></span>
+        <span class="archive-loader__text" id="loader-text"></span>
+      </p>
+    </div>
+    <p class="visually-hidden" id="loader-sr-status">Authenticating archive access.</p>
+  </section>
+
+
+  <!-- ============================================================
+       ARRIVAL HERO
+       Checkpoint artwork. Slow scale. Atmospheric restraint.
+       Revealed when the loader lifts like paper removed.
+       ============================================================ -->
+  <section id="arrival-hero" class="arrival-hero" aria-labelledby="arrival-hero-heading">
+    <div class="arrival-hero__stage">
+      <div class="arrival-hero__media" aria-hidden="true">
+        <img
+          class="arrival-hero__image"
+          src="reference/cover.png"
+          alt=""
+          width="941"
+          height="1672"
+          decoding="async"
+        >
+        <div class="arrival-hero__atmosphere"></div>
+        <div class="arrival-hero__vignette"></div>
       </div>
-      <div>
-        <dt>Record Series</dt>
-        <dd>UCW-001</dd>
+
+      <div class="arrival-hero__content">
+        <p class="arrival-hero__epigraph">
+          <span class="arrival-hero__epigraph-line">Some wars end.</span>
+          <span class="arrival-hero__epigraph-line">Some become paperwork.</span>
+        </p>
+
+        <h1 id="arrival-hero-heading" class="arrival-hero__title">
+          <span class="arrival-hero__title-line">The</span>
+          <span class="arrival-hero__title-line">Uncivil</span>
+          <span class="arrival-hero__title-line">War</span>
+        </h1>
       </div>
-      <div>
-        <dt>Access Level</dt>
-        <dd>Public Release — Redacted</dd>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       THE RECORD
+       First interactive archive artifact. A folder on the desk.
+       Not a card. Not a modal. Weathered paper and brass.
+       ============================================================ -->
+  <section id="the-record" class="the-record" aria-labelledby="the-record-heading">
+    <h2 id="the-record-heading" class="visually-hidden">The Record</h2>
+
+    <div class="record-desk">
+      <div class="archive-folder" id="archive-folder-1" data-archive-folder>
+        <div class="archive-folder__artifact">
+          <div class="archive-folder__back" aria-hidden="true"></div>
+
+          <div class="archive-folder__pocket">
+            <article
+              class="archive-folder__document"
+              id="archive-folder-document"
+              aria-hidden="true"
+              tabindex="-1"
+            >
+              <header class="archive-folder__document-header">
+                <p class="archive-folder__field">Record Group 12</p>
+                <p class="archive-folder__field">Minute 287</p>
+                <p class="archive-folder__field">Article VII</p>
+                <p class="archive-folder__field archive-folder__field--stamp">Declassified</p>
+              </header>
+
+              <div class="archive-folder__document-body">
+                <p>
+                  Joint Minutes — Session Record. Article VII pertains to the
+                  convening authority and the integrity of the restored canvass
+                  under Emergency Continuation Protocol.
+                </p>
+                <p>
+                  The delegates present certify that the following minutes reflect
+                  testimony entered into the record on Day 2557 of the Long Emergency.
+                  Conditions permitting, the full transcript will be inserted from
+                  the manuscript archive.
+                </p>
+                <p>
+                  Until conditions permit the security of delegates and the integrity
+                  of the canvass, portions of this minute remain withheld. What
+                  follows is the public release excerpt as cleared by the Continuance
+                  Authority.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button
+            type="button"
+            class="archive-folder__cover"
+            aria-expanded="false"
+            aria-controls="archive-folder-document"
+            aria-label="Open archive folder. Record Group 12, Minute 287."
+          >
+            <span class="archive-folder__cover-face">
+              <span class="archive-folder__fibers" aria-hidden="true"></span>
+              <span class="archive-folder__coffee-ring" aria-hidden="true"></span>
+              <span class="archive-folder__fastener" aria-hidden="true">
+                <span class="archive-folder__fastener-brass"></span>
+              </span>
+              <span class="archive-folder__corner-fold" aria-hidden="true"></span>
+              <span class="archive-folder__stamp-mark" aria-hidden="true">Declassified</span>
+              <span class="archive-folder__archive-number" aria-hidden="true">RG-12 / 287</span>
+            </span>
+          </button>
+        </div>
       </div>
-      <div>
-        <dt>Session</dt>
-        <dd><time datetime="2026">Year Seven, Post-Emergency</time></dd>
-      </div>
-    </dl>
-    <p class="archive-loader__notice">Do not close this window during transfer.</p>
+    </div>
   </section>
 
 
@@ -580,7 +676,7 @@
     </p>
   </footer>
 
-  <script src="js/archive.js" defer></script>
+  <script src="js/app.js" defer></script>
 
 </body>
 </html>

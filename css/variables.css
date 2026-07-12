@@ -1,0 +1,333 @@
+/* ==========================================================================
+   THE ARCHIVE — Design Tokens
+   Project MINUTES · Identity System v1
+
+   Restrained. Cinematic. Archival.
+   Variables only. No reset. No component styles.
+   ========================================================================== */
+
+:root {
+
+  /* ------------------------------------------------------------------------
+     COLORS
+     Aged government paper, institutional ink, weathered metal.
+     Muted. Heavy. Permanent. Never promotional.
+     ------------------------------------------------------------------------ */
+
+  /* Paper — aged document stock, warm and slightly yellowed */
+  --color-paper: #ebe6dc;
+  --color-paper-warm: #f2ede4;
+  --color-paper-cool: #e2dfd8;
+  --color-paper-aged: #d9d3c6;
+  --color-paper-stain: #cfc7b6;
+
+  /* Ink — primary text, iron gall on fiber */
+  --color-ink: #1a1814;
+  --color-ink-muted: #3d3a34;
+  --color-ink-faded: #5c5850;
+  --color-ink-ghost: #8a857a;
+
+  /* Charcoal — deep neutral, tunnel concrete, blackout */
+  --color-charcoal: #2a2824;
+  --color-charcoal-deep: #1e1c19;
+  --color-charcoal-soft: #3f3c37;
+
+  /* Concrete — institutional walls, weigh stations, brutal surfaces */
+  --color-concrete: #8a8780;
+  --color-concrete-light: #a8a49c;
+  --color-concrete-dark: #6e6b64;
+
+  /* Steel — cold infrastructure, filing cabinets, barrier posts */
+  --color-steel: #5c6168;
+  --color-steel-light: #7a8088;
+  --color-steel-dark: #43484e;
+
+  /* Oxidized Brass — folder corners, classification stamps, aged hardware */
+  --color-oxidized-brass: #6b5e45;
+  --color-oxidized-brass-light: #8a7d62;
+  --color-oxidized-brass-dark: #4f4533;
+  --color-oxidized-brass-patina: #4a5c4e;
+
+  /* Emergency Red — institutional alarm, classification markings. Never neon. */
+  --color-emergency-red: #7a2e2e;
+  --color-emergency-red-dark: #5c2222;
+  --color-emergency-red-muted: #8b4a4a;
+  --color-emergency-red-stamp: #9a3838;
+
+  /* Army Olive — field uniforms, ration cards, military archive binders */
+  --color-army-olive: #4a4f3c;
+  --color-army-olive-light: #5e6349;
+  --color-army-olive-dark: #36392b;
+  --color-army-olive-faded: #6b7058;
+
+  /* Rust — weathered iron, abandoned infrastructure, decay */
+  --color-rust: #7a4a3a;
+  --color-rust-light: #946052;
+  --color-rust-dark: #5c382c;
+  --color-rust-oxide: #6b4a3f;
+
+  /* Rain — atmospheric gray, drowned valleys, overcast dread */
+  --color-rain: #5a6572;
+  --color-rain-light: #7a8490;
+  --color-rain-dark: #424a54;
+  --color-rain-mist: #8a929c;
+
+  /* Black — absolute dark, classified void, tunnel before the lights */
+  --color-void: #0d0c0a;
+  --color-void-soft: #141210;
+
+  /* White — document highlight, classification reverse. Never pure. */
+  --color-white: #f7f5f0;
+  --color-white-pure: #faf9f6;
+
+   --opacity-paper: .95;
+
+   --opacity-document: .90;
+   
+   --opacity-overlay: .60;
+   
+   --opacity-rain: .12;
+
+   --texture-paper-opacity: .05;
+
+   --texture-film-opacity: .04;
+
+   --texture-rain-opacity: .10;
+
+   --transition-breath: 2800ms;
+  /* ------------------------------------------------------------------------
+     TYPOGRAPHY
+     Display commands attention. Body carries the record. Quote holds weight.
+     ------------------------------------------------------------------------ */
+
+  /* Font families */
+  --font-display: "Bebas Neue", "Franklin Gothic Medium", "Arial Narrow", sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-quote: Georgia, "Times New Roman", "Palatino Linotype", serif;
+  --font-monospace: "Courier New", Courier, "Liberation Mono", monospace;
+
+  /* Font weights */
+  --font-weight-thin: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Font sizes — fluid, restrained scale */
+  --font-size-xs: clamp(0.6875rem, 0.65rem + 0.15vw, 0.75rem);       /* 11–12px */
+  --font-size-sm: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);      /* 12–13px */
+  --font-size-base: clamp(0.875rem, 0.84rem + 0.2vw, 1rem);         /* 14–16px */
+  --font-size-md: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);           /* 16–18px */
+  --font-size-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);     /* 18–21px */
+  --font-size-xl: clamp(1.3125rem, 1.2rem + 0.5vw, 1.625rem);       /* 21–26px */
+  --font-size-2xl: clamp(1.625rem, 1.45rem + 0.75vw, 2.125rem);     /* 26–34px */
+  --font-size-3xl: clamp(2rem, 1.75rem + 1.1vw, 2.75rem);           /* 32–44px */
+  --font-size-4xl: clamp(2.5rem, 2.1rem + 1.6vw, 3.5rem);            /* 40–56px */
+  --font-size-5xl: clamp(3rem, 2.4rem + 2.4vw, 4.5rem);             /* 48–72px */
+  --font-size-display: clamp(3.5rem, 2.8rem + 3vw, 6rem);           /* 56–96px */
+
+  /* Line heights */
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.3;
+  --line-height-base: 1.55;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.9;
+  --line-height-display: 0.95;
+
+  /* Letter spacing */
+  --letter-spacing-tighter: -0.03em;
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.04em;
+  --letter-spacing-wider: 0.08em;
+  --letter-spacing-widest: 0.14em;
+  --letter-spacing-display: 0.06em;
+  --letter-spacing-stamp: 0.2em;
+  --letter-spacing-classification: 0.28em;
+
+
+  /* ------------------------------------------------------------------------
+     SPACING
+     4px base grid. Official documents align to invisible structure.
+     ------------------------------------------------------------------------ */
+
+  /* 4px spacing scale */
+  --space-1: 0.25rem;    /*  4px */
+  --space-2: 0.5rem;     /*  8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+  --space-40: 10rem;     /* 160px */
+  --space-48: 12rem;     /* 192px */
+
+  /* Radius values — sharp. Institutional. No modern rounding. */
+  --radius-none: 0;
+  --radius-hairline: 1px;
+  --radius-subtle: 2px;
+  --radius-document: 3px;
+  --radius-stamp: 4px;
+
+  /* Border widths */
+  --border-width-hairline: 1px;
+  --border-width-thin: 1px;
+  --border-width-standard: 2px;
+  --border-width-heavy: 3px;
+  --border-width-stamp: 4px;
+  --border-width-classification: 6px;
+
+  /* Container widths */
+  --container-prose: 38rem;       /* 608px — document body */
+  --container-narrow: 40rem;      /* 640px */
+  --container-content: 48rem;     /* 768px */
+  --container-standard: 60rem;    /* 960px */
+  --container-wide: 75rem;          /* 1200px */
+  --container-max: 90rem;         /* 1440px */
+
+  /* Section spacing */
+  --section-gap-sm: clamp(3rem, 2.5rem + 2vw, 5rem);
+  --section-gap-md: clamp(5rem, 4rem + 4vw, 8rem);
+  --section-gap-lg: clamp(8rem, 6rem + 6vw, 12rem);
+  --section-gap-xl: clamp(10rem, 8rem + 8vw, 16rem);
+  --section-padding-x: clamp(1.25rem, 1rem + 2vw, 3rem);
+  --section-padding-y: clamp(3rem, 2rem + 4vw, 6rem);
+
+
+  /* ------------------------------------------------------------------------
+     Z-INDEX SCALE
+     Layered like stacked files. Loader sits above everything.
+     ------------------------------------------------------------------------ */
+
+  --z-index-background: -1;
+  --z-index-base: 0;
+  --z-index-content: 10;
+  --z-index-raised: 20;
+  --z-index-sticky: 50;
+  --z-index-overlay: 100;
+  --z-index-modal: 200;
+  --z-index-loader: 1000;
+
+
+  /* ------------------------------------------------------------------------
+     TRANSITIONS
+     Slow reveals. Nothing snaps. Silence has duration.
+     ------------------------------------------------------------------------ */
+
+  --transition-fast: 150ms;
+  --transition-medium: 350ms;
+  --transition-slow: 650ms;
+  --transition-cinematic: 1200ms;
+
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-cinematic: cubic-bezier(0.22, 0.03, 0.26, 1);
+  --ease-document: cubic-bezier(0.33, 0, 0.1, 1);
+  --ease-reveal: cubic-bezier(0.16, 0.84, 0.44, 1);
+
+  --transition-fast-ease: var(--transition-fast) var(--ease-out);
+  --transition-medium-ease: var(--transition-medium) var(--ease-cinematic);
+  --transition-slow-ease: var(--transition-slow) var(--ease-cinematic);
+  --transition-cinematic-ease: var(--transition-cinematic) var(--ease-reveal);
+
+
+  /* ------------------------------------------------------------------------
+     SHADOWS
+     Paper weight, not UI elevation. Subtle. Physical. Never decorative.
+     ------------------------------------------------------------------------ */
+
+  --shadow-paper:
+    0 1px 2px rgba(13, 12, 10, 0.06),
+    0 1px 0 rgba(13, 12, 10, 0.04);
+
+  --shadow-card:
+    0 2px 4px rgba(13, 12, 10, 0.08),
+    0 8px 16px rgba(13, 12, 10, 0.06),
+    0 1px 0 rgba(13, 12, 10, 0.1);
+
+  --shadow-deep:
+    0 4px 8px rgba(13, 12, 10, 0.1),
+    0 16px 32px rgba(13, 12, 10, 0.12),
+    0 32px 64px rgba(13, 12, 10, 0.08);
+
+  --shadow-glow:
+    0 0 24px rgba(122, 46, 46, 0.12),
+    0 0 48px rgba(122, 46, 46, 0.06);
+
+  --shadow-inset-paper: inset 0 0 0 1px rgba(13, 12, 10, 0.06);
+  --shadow-inset-stamp: inset 0 0 0 2px rgba(122, 46, 46, 0.2);
+
+
+  /* ------------------------------------------------------------------------
+     BREAKPOINTS
+     Mobile first. Archive readable at every clearance level.
+     ------------------------------------------------------------------------ */
+
+  --breakpoint-mobile: 30rem;     /*  480px */
+  --breakpoint-tablet: 48rem;     /*  768px */
+  --breakpoint-desktop: 64rem;    /* 1024px */
+  --breakpoint-wide: 80rem;       /* 1280px */
+
+
+  /* ------------------------------------------------------------------------
+     TIMING
+     Loader latency, fade cadence, scroll rhythm, parallax drift.
+     ------------------------------------------------------------------------ */
+
+  /* Loader delays */
+  --timing-loader-initial: 800ms;
+  --timing-loader-status: 1200ms;
+  --timing-loader-metadata: 1800ms;
+  --timing-loader-complete: 3200ms;
+  --timing-loader-exit: 4800ms;
+  --timing-loader-stagger: 400ms;
+
+  /* Fade timings */
+  --timing-fade-in: 900ms;
+  --timing-fade-out: 700ms;
+  --timing-fade-cross: 1400ms;
+  --timing-fade-slow: 2200ms;
+
+  /* Scroll timings */
+  --timing-scroll-reveal: 800ms;
+  --timing-scroll-stagger: 120ms;
+  --timing-scroll-settle: 400ms;
+  --timing-scroll-snap: 600ms;
+
+  /* Parallax speed constants */
+  --parallax-speed-slow: 0.15;
+  --parallax-speed-medium: 0.3;
+  --parallax-speed-fast: 0.5;
+  --parallax-speed-paper: 0.08;
+  --parallax-speed-background: 0.25;
+
+
+  /* ------------------------------------------------------------------------
+     MOTION
+     Documents move like paper. Titles arrive like verdicts.
+     ------------------------------------------------------------------------ */
+
+  --motion-document-slide: clamp(2rem, 1.5rem + 2vw, 4rem);
+  --motion-document-slide-far: clamp(4rem, 3rem + 4vw, 8rem);
+
+  --motion-paper-rotation: 0.6deg;
+  --motion-paper-rotation-subtle: 0.3deg;
+  --motion-paper-rotation-settle: 0.15deg;
+
+  --motion-title-reveal: 1800ms;
+  --motion-title-reveal-delay: 600ms;
+  --motion-title-letter-stagger: 80ms;
+
+  --motion-cursor-blink: 1050ms;
+
+}
