@@ -32,7 +32,8 @@ body{
     line-height:1.7;
 }
 
-.hero{
+.hero,
+.scene-hero {
     position:relative;
     min-height:100vh;
     display:flex;
@@ -42,7 +43,8 @@ body{
     background:#000;
 }
 
-.hero img{
+.hero img,
+.scene-image {
     position:absolute;
     inset:0;
     width:100%;
@@ -51,7 +53,8 @@ body{
     object-position:center;
 }
 
-.overlay{
+.overlay,
+.scene-overlay {
     position:absolute;
     inset:0;
 
@@ -66,7 +69,8 @@ body{
 
     z-index:2;
 }
-.hero-content{
+.hero-content,
+.scene-content {
 
     position:relative;
 
@@ -144,7 +148,8 @@ blockquote{
 
 }
 
-.story{
+.story,
+.scene-story {
 
     max-width:860px;
 

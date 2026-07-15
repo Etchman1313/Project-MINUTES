@@ -1,77 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project MINUTES | Cabinet Zero Prototype</title>
+<!--
+============================================================
+PROJECT MINUTES
 
-<link rel="stylesheet" href="css/vision-book.css">
+File:
+    index.html
+
+Purpose:
+    Archive Engine Prototype
+    Sprint 0.5
+
+Author:
+    OpenAI + Timothy Eytcheson
+
+============================================================
+-->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Project MINUTES | Cabinet Zero
+    </title>
+
+    <link rel="stylesheet"
+          href="css/vision-book.css">
+
 </head>
 
 <body>
 
-<main id="archive">
+<main class="vision-book">
 
-    <header class="hero">
+    <section class="scene cabinet-zero">
 
-        <img
-            src="vision-book/page-04-cabinet-zero/hero/negotiations.png"
-            alt="Delegations facing one another across a negotiation table">
+        <!-- ===================================================== -->
+        <!-- HERO                                                   -->
+        <!-- ===================================================== -->
 
-        <div class="overlay"></div>
+        <header class="scene-hero">
 
-        <section class="hero-content">
+            <img
+                class="scene-image"
+                src="vision-book/page-04-cabinet-zero/hero/negotiations.png"
+                alt="Cabinet Zero negotiations">
 
-            <p class="classification">
-                DECLASSIFIED // PROJECT MINUTES
+            <div class="scene-overlay"></div>
+
+            <section class="scene-content">
+
+                <p class="classification">
+
+                    DECLASSIFIED
+                    ·
+                    PROJECT MINUTES
+
+                </p>
+
+                <h1 class="scene-title">
+
+                    THE UNCIVIL WAR
+
+                </h1>
+
+                <h2 class="scene-subtitle">
+
+                    Cabinet Zero
+
+                </h2>
+
+                <blockquote class="scene-quote">
+
+                    Governments change.<br>
+
+                    Administrations change.<br>
+
+                    Cabinet Zero remains.
+
+                </blockquote>
+
+            </section>
+
+        </header>
+
+        <!-- ===================================================== -->
+        <!-- STORY                                                  -->
+        <!-- ===================================================== -->
+
+        <article class="scene-story">
+
+            <h3>
+
+                The Meeting That Never Happened
+
+            </h3>
+
+            <p>
+
+                No cameras recorded the meeting.
+
+                No reporters waited outside.
+
+                No official transcript exists.
+
             </p>
 
-            <h1>The Uncivil War</h1>
+            <p>
 
-            <h2>Cabinet Zero</h2>
+                Yet every ceasefire, every humanitarian
+                corridor, every quiet compromise traces back
+                to rooms like this—rooms designed so history
+                can deny they ever existed.
 
-            <blockquote>
-                Governments change.<br>
-                Administrations change.<br>
-                Cabinet Zero remains.
-            </blockquote>
+            </p>
 
-        </section>
+            <p>
 
-    </header>
+                The men and women seated across this table
+                are not negotiating political victory.
 
-    <article class="story">
+                They are negotiating how much of America
+                survives.
 
-        <h3>The Meeting That Never Happened</h3>
+            </p>
 
-        <p>
-            No cameras recorded the meeting.
-            No reporters waited outside.
-            No official transcript exists.
-        </p>
+            <p>
 
-        <p>
-            Yet every ceasefire, every humanitarian corridor,
-            every quiet compromise traces back to rooms like this—
-            rooms designed so history can deny they ever existed.
-        </p>
+                This is the first recovered page from
+                <strong>Project MINUTES.</strong>
 
-        <p>
-            The men and women seated across this table are not
-            negotiating political victory.
-            They are negotiating how much of America survives.
-        </p>
+            </p>
 
-        <p>
-            This is the first recovered page from
-            <strong>Project MINUTES</strong>.
-        </p>
+        </article>
 
-    </article>
+    </section>
 
 </main>
 
 <script src="js/archive-engine.js"></script>
 
 </body>
+
 </html>
